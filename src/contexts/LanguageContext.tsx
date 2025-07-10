@@ -275,7 +275,7 @@ const translations = {
     
     // Footer
     'footer.copyright': '© 2024 SpotiTempo. Feito com ❤️ para amantes da música.',
-  }
+  },
   es: {
     // Navigation
     'nav.features': 'Características',
