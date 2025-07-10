@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Globe, ChevronDown } from 'lucide-react';
 import { useLanguage, Language } from '../contexts/LanguageContext';
 
 const LanguageToggle: React.FC = () => {
   const { language, setLanguage } = useLanguage();
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const languages = [
     { code: 'en' as Language, name: 'English', flag: '🇺🇸' },

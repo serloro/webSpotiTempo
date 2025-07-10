@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Music, BarChart3, Zap, Play, Github, ExternalLink, ChevronDown, Headphones, TrendingUp, Filter } from 'lucide-react';
 import { useLanguage } from './contexts/LanguageContext';
 import LanguageToggle from './components/LanguageToggle';
