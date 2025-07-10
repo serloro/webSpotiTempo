@@ -1,4 +1,3 @@
-import React from 'react';
 import { Globe, ChevronDown } from 'lucide-react';
 import { useLanguage, Language } from '../contexts/LanguageContext';
 
