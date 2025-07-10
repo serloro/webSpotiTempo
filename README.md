@@ -11,7 +11,7 @@ A modern web application that analyzes your Spotify music library and organizes 
 
 ## 🚀 Live Demo
 
-Visit the live application: [SpotiTempo](https://yourusername.github.io/spotitempo/)
+Visit the live application: [SpotiTempo](https://serloro.github.io/webSpotiTempo/)
 
 ## 🛠️ Technologies Used
 
@@ -34,8 +34,8 @@ Visit the live application: [SpotiTempo](https://yourusername.github.io/spotitem
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/spotitempo.git
-cd spotitempo
+git clone https://github.com/serloro/webSpotiTempo.git
+cd webSpotiTempo
 ```
 
 2. Install dependencies:

@@ -81,7 +81,9 @@ function App() {
               </button>
               <LanguageToggle />
               <a 
-                href="#" 
+                href="https://github.com/serloro/webSpotiTempo" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center space-x-2 btn-primary px-4 py-2 rounded-lg"
               >
                 <Github className="w-4 h-4" />
@@ -128,10 +130,15 @@ function App() {
               <Play className="w-5 h-5" />
               <span>{t('hero.cta.demo')}</span>
             </button>
-            <button className="flex items-center space-x-3 btn-secondary px-8 py-4 rounded-xl text-lg font-semibold">
+            <a 
+              href="https://github.com/serloro/webSpotiTempo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-3 btn-secondary px-8 py-4 rounded-xl text-lg font-semibold"
+            >
               <ExternalLink className="w-5 h-5" />
               <span>{t('hero.cta.github')}</span>
-            </button>
+            </a>
           </div>
           
           <button 
@@ -316,10 +323,15 @@ function App() {
                 <Music className="w-5 h-5" />
                 <span>{t('cta.primary')}</span>
               </button>
-              <button className="flex items-center space-x-3 text-green-400 hover:text-green-300 px-8 py-4 text-lg font-semibold transition-colors">
+              <a 
+                href="https://github.com/serloro/webSpotiTempo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-3 text-green-400 hover:text-green-300 px-8 py-4 text-lg font-semibold transition-colors"
+              >
                 <Github className="w-5 h-5" />
                 <span>{t('cta.secondary')}</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
