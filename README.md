@@ -77,18 +77,6 @@ npm run dev
 npm run build
 ```
 
-## 🌐 Despliegue
-
-Este proyecto está configurado para despliegue automático en GitHub Pages usando GitHub Actions. Cada push a la rama `main` activará un nuevo despliegue.
-
-## 📝 Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT - consulta el archivo [LICENSE](LICENSE) para más detalles.
-
-## 🤝 Contribuciones
-
-¡Las contribuciones son bienvenidas! No dudes en enviar un Pull Request.
-
 ## 📧 Contacto
 
 Creado con ❤️ por **Sergio L.** para los amantes de la música.
