@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/spotitempo/',
+  base: '/webSpotiTempo/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
