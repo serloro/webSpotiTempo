@@ -51,19 +51,39 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-green-900">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-green-500/20">
+      <nav className="fixed top-0 w-full z-50 glass border-b border-green-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              <Music className="w-8 h-8 text-green-400" />
+              <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center">
+                <Music className="w-5 h-5 text-white" />
+              </div>
               <span className="text-xl font-bold text-white">SpotiTempo</span>
             </div>
-            <div className="hidden md:flex space-x-8">
-              <button onClick={() => scrollToSection('features')} className="text-gray-300 hover:text-green-400 transition-colors">{t('nav.features')}</button>
-              <button onClick={() => scrollToSection('demo')} className="text-gray-300 hover:text-green-400 transition-colors">{t('nav.demo')}</button>
-              <button onClick={() => scrollToSection('tech')} className="text-gray-300 hover:text-green-400 transition-colors">{t('nav.technology')}</button>
+            <div className="hidden md:flex items-center space-x-8">
+              <button 
+                onClick={() => scrollToSection('features')} 
+                className="text-gray-300 hover:text-green-400 transition-colors font-medium"
+              >
+                {t('nav.features')}
+              </button>
+              <button 
+                onClick={() => scrollToSection('demo')} 
+                className="text-gray-300 hover:text-green-400 transition-colors font-medium"
+              >
+                {t('nav.demo')}
+              </button>
+              <button 
+                onClick={() => scrollToSection('tech')} 
+                className="text-gray-300 hover:text-green-400 transition-colors font-medium"
+              >
+                {t('nav.technology')}
+              </button>
               <LanguageToggle />
-              <a href="#" className="flex items-center space-x-2 bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg transition-colors">
+              <a 
+                href="#" 
+                className="flex items-center space-x-2 btn-primary px-4 py-2 rounded-lg"
+              >
                 <Github className="w-4 h-4" />
                 <span>{t('nav.github')}</span>
               </a>
@@ -81,20 +101,20 @@ function App() {
           className="absolute inset-0 opacity-20"
           style={{
             transform: `translateY(${scrollY * 0.5}px)`,
-            background: 'radial-gradient(circle at 50% 50%, #10b981 0%, transparent 50%)'
+            background: 'radial-gradient(circle at 50% 50%, #22c55e 0%, transparent 70%)'
           }}
         />
         
         <div className={`max-w-4xl mx-auto text-center px-4 transition-all duration-1000 ${isVisible.hero ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="mb-8">
-            <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl mb-6 shadow-2xl">
+            <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl mb-6 shadow-2xl hover-lift">
               <Music className="w-12 h-12 text-white" />
             </div>
           </div>
           
           <h1 className="text-4xl md:text-7xl font-bold text-white mb-6 leading-tight">
             {t('hero.title.line1')}
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
+            <span className="block gradient-text">
               {t('hero.title.line2')}
             </span>
           </h1>
@@ -104,11 +124,11 @@ function App() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <button className="flex items-center space-x-3 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <button className="flex items-center space-x-3 btn-primary px-8 py-4 rounded-xl text-lg font-semibold hover-lift">
               <Play className="w-5 h-5" />
               <span>{t('hero.cta.demo')}</span>
             </button>
-            <button className="flex items-center space-x-3 border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-black px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300">
+            <button className="flex items-center space-x-3 btn-secondary px-8 py-4 rounded-xl text-lg font-semibold">
               <ExternalLink className="w-5 h-5" />
               <span>{t('hero.cta.github')}</span>
             </button>
@@ -158,7 +178,7 @@ function App() {
             ].map((feature, index) => (
               <div 
                 key={index}
-                className={`bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-green-500/50 transition-all duration-500 transform hover:scale-105 ${isVisible.features ? `opacity-100 translate-y-0 ${feature.delay}` : 'opacity-0 translate-y-10'}`}
+                className={`glass rounded-2xl p-8 hover:border-green-500/50 transition-all duration-500 hover-lift ${isVisible.features ? `opacity-100 translate-y-0 ${feature.delay}` : 'opacity-0 translate-y-10'}`}
               >
                 <div className="text-green-400 mb-4">
                   {feature.icon}
@@ -197,7 +217,7 @@ function App() {
                 ))}
               </div>
               
-              <button className="flex items-center space-x-3 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <button className="flex items-center space-x-3 btn-primary px-8 py-4 rounded-xl text-lg font-semibold hover-lift">
                 <Headphones className="w-5 h-5" />
                 <span>{t('demo.cta')}</span>
               </button>
@@ -205,7 +225,7 @@ function App() {
             
             <div className={`transition-all duration-1000 delay-300 ${isVisible.demo ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
               <div className="relative">
-                <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 shadow-2xl">
+                <div className="glass rounded-2xl p-8 shadow-2xl hover-lift">
                   <div className="flex items-center space-x-3 mb-6">
                     <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                     <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
@@ -218,7 +238,7 @@ function App() {
                         <Music className="w-5 h-5 text-green-400" />
                         <span className="text-white">{t('demo.analyzing')}</span>
                       </div>
-                      <div className="text-green-400">128 BPM</div>
+                      <div className="text-green-400 font-bold">128 BPM</div>
                     </div>
                     
                     <div className="grid grid-cols-2 gap-4">
@@ -266,7 +286,7 @@ function App() {
             ].map((tech, index) => (
               <div 
                 key={index}
-                className={`bg-gray-800/30 backdrop-blur-sm border border-gray-700 rounded-xl p-6 text-center hover:border-green-500/50 transition-all duration-500 ${isVisible.tech ? `opacity-100 translate-y-0` : 'opacity-0 translate-y-10'}`}
+                className={`glass rounded-xl p-6 text-center hover:border-green-500/50 transition-all duration-500 hover-lift ${isVisible.tech ? `opacity-100 translate-y-0` : 'opacity-0 translate-y-10'}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-400 rounded-lg mx-auto mb-4 flex items-center justify-center">
@@ -292,7 +312,7 @@ function App() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="flex items-center space-x-3 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <button className="flex items-center space-x-3 btn-primary px-8 py-4 rounded-xl text-lg font-semibold hover-lift">
                 <Music className="w-5 h-5" />
                 <span>{t('cta.primary')}</span>
               </button>
@@ -310,7 +330,9 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <Music className="w-6 h-6 text-green-400" />
+              <div className="w-6 h-6 bg-gradient-to-br from-green-400 to-green-600 rounded flex items-center justify-center">
+                <Music className="w-4 h-4 text-white" />
+              </div>
               <span className="text-lg font-bold text-white">SpotiTempo</span>
             </div>
             <div className="text-gray-400 text-sm">
